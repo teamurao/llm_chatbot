@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant User
+    participant Bot as Telegram Bot
+    participant LLM as LLM API
+
+    User->>Bot: /ask <question>
+    Bot->>LLM: ask(prompt)
+    LLM-->>Bot: response
+    Bot-->>User: answer
